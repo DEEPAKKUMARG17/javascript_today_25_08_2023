@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html onmouseover="display(event)">
+<body>
+   <h3>Find the coordinates of the cursor with JavaScript</h3>
+   <p id="result"></p>
+   <script>
+      function display(event) {
+         let X = event.clientX;
+         let y=X - event.clientY;
+         let result = document.getElementById("result");
+         result.innerHTML = "<b>X-coordinate: </b>" + X+ "<br>Y-coordinate:</br>" +y;
+      }
+   </script>
+</body>
+</html>

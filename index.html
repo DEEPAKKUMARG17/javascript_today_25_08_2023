@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="button" >clickMe</button>
+    <div id ="maincontent"></div>
+    <div>
+        <h1>Reggisteration Form</h1>
+        <form action="" onsubmit="shower(event)">
+            <input type="text" name="usename" id="username">
+            <input type="password" name="password" maxlength="5"  id="userpassword">
+            <input type="submit" name="submit" value="submit" />
+            <h1 id="user"></h1>
+            <h1 id="pass"></h1>
+        </form>
+        <button id="logout">logout</button>
+       
+    </div>
+    <div>
+        <h1 id="text">ClickMe</h1>
+        <button id="changetext">changeText</button>
+    </div>
+<div id="pop">
+    <img src="images/img.jfif" alt="hello" id="images">
+</div>
+<div>
+    <h1 id="displayCounter"></h1>
+    <button id="counter">Counter</button>
+    <div>
+        
+        <input type="text" id="data" placeholder="enetrtext">
+        <h1 id="texter"></h1>
+    </div>
+</div>
+<div id="products">
+  <button id="view" onclick="show(arr)"> view product</button>
+  <button id="adder" >add items</button>
+</div>
+<div id="popup" >
+    <form action="">
+        <input type="text" placeholder="enter items" id="titlecart">
+        <input type="text" placeholder="enter description" id="detailscart">
+        <input type="submit" value="submit" onclick="addcart(event)">
+    </form>
+</div>
+<div id="popupbg"></div>
+    <script src="app.js"></script>
+</body>
+</html>
