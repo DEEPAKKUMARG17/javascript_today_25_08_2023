@@ -7,31 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- task1-->
     <button id="button" >clickMe</button>
-    <div id ="maincontent"></div>
-    <div>
-        <h1>Reggisteration Form</h1>
-        <form action="" onsubmit="shower(event)">
-            <input type="text" name="usename" id="username">
-            <input type="password" name="password" maxlength="5"  id="userpassword">
-            <input type="submit" name="submit" value="submit" />
-            <h1 id="user"></h1>
-            <h1 id="pass"></h1>
-        </form>
-        <button id="logout">logout</button>
-       
-    </div>
+
+    <!--Task 3-->
     <div>
         <h1 id="text">ClickMe</h1>
         <button id="changetext">changeText</button>
     </div>
 <div id="pop">
+    <!--Task 4-->
     <img src="images/img.jfif" alt="hello" id="images">
 </div>
+<!--Task 5-->
 <div>
     <h1 id="displayCounter"></h1>
     <button id="counter">Counter</button>
+    <!--task 6-->
     <div>
         
         <input type="text" id="data" placeholder="enetrtext">
@@ -51,5 +43,36 @@
 </div>
 <div id="popupbg"></div>
     <script src="app.js"></script>
+
+
+    <div class="q-2">
+        <h1>Question 2 : User Authentication Flow</h1>
+        <button id="registration">Registration</button>
+        <button id="login">Login</button>
+        <button id="logout">Logout</button>
+        <div class="registration" id="registration-div">
+          <h3>Registration :</h3>
+          <form>
+            <label>Username :</label>
+            <input type="text" id="reg-username" required />
+            <label>Password :</label>
+            <input type="password" id="reg-password" required />
+            <input type="submit" id="reg-submit" />
+          </form>
+        </div>
+        <div class="login" id="login-div">
+          <h3>Login :</h3>
+          <form>
+            <label>Username :</label>
+            <input type="text" id="log-username" required />
+            <label>Password :</label>
+            <input type="password" id="log-password" required />
+            <input type="submit" id="log-submit" />
+          </form>
+        </div>
+        <h3 id="login-success">Login Successfully</h3>
+      </div>
+ 
+
 </body>
 </html>

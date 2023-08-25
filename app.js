@@ -33,12 +33,7 @@ adder.onclick=()=>
     popup.style.display="block";
     popupbg.style.display="block";
 }
-logout.onclick=()=>
-{
-    user.innerHTML=""
-    password.innerHTML=""
 
-}
 
 function append(prname,details)
 {
@@ -131,3 +126,61 @@ data.onkeyup=()=>
 {
     texter.innerHTML=data.value
 }
+let Registration = document.getElementById("registration");
+let Login = document.getElementById("login");
+let RegistrationDiv = document.getElementById("registration-div");
+let LoginDiv = document.getElementById("login-div");
+let Logout = document.getElementById("logout");
+let regUsername = document.getElementById("reg-username");
+let regPassword = document.getElementById("reg-password");
+let regSubmit = document.getElementById("reg-submit");
+let logUsername = document.getElementById("log-username");
+let logPassword = document.getElementById("log-password");
+let logSubmit = document.getElementById("log-submit");
+let logSuccess = document.getElementById("login-success");
+
+let registration = [];
+Registration.addEventListener("click",()=>{
+    RegistrationDiv.style.display = "block";
+    LoginDiv.style.display = "none";
+})
+
+Login.addEventListener("click",()=>{
+    RegistrationDiv.style.display = "none";
+    LoginDiv.style.display = "block";
+})
+
+Logout.addEventListener("click",()=>{
+    RegistrationDiv.style.display = "block";
+    LoginDiv.style.display = "none";
+})
+
+regSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (regUsername.value !== "" && regPassword.value !== "") {
+    registration.push({
+      username: regUsername.value,
+      password: regPassword.value,
+    });
+    regUsername.value = "";
+    regPassword.value = "";
+  }
+});
+
+logSubmit.addEventListener("click",(e)=>{
+    e.preventDefault();
+    if (logUsername.value !== "" && logPassword.value !== "") {
+        for(let i=0;i<registration.length;i++){
+            if(registration[i].username === logUsername.value && registration[i].password === logPassword.value){
+                logSuccess.style.display = "block";
+                logSuccess.innerText = "Login Successfully"
+            }
+            else {
+                logSuccess.innerText = "Please Enter Registered Username and Password"
+                logSuccess.style.display = "block";
+            }
+        }
+        logUsername.value = "";
+        logPassword.value = "";
+    }
+})

@@ -28,3 +28,15 @@ pop,img:hover{
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
+
+#registration-div{
+    margin-top: 20px;
+}
+#login-div{
+    margin-top: 20px;
+    display: none;
+}
+#login-success{
+    margin-top: 20px;
+    display: none;
+}
